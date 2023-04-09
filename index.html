@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="formulario.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Monedas</title>
+    <script type="text/javascript">
+        function convertir(){
+            var valore = parseInt(document.getElementById("valor").value);
+            var resultado = 0;
+            var dolar = 0.91;
+            var euro = 1.10;
+            if(document.getElementById("uno").checked){
+                resultado = valore / dolar;
+                alert("El cambio de Dólares a Euros es de : €" + resultado.toFixed(4));
+            }
+        
+        else if (document.getElementById("dos").checked){
+            resultado = valore / euro;
+            alert("El cambio de Euros a Dólares es de : $" + resultado.toFixed(4));
+        }
+        else{
+            alert("Tienes que completar todos los campos");
+        }
+    }
+
+    </script>
+</head>
+<body>
+  <h3>Conversor de Monedas</h3>  
+  <form class="formulario">
+  <p>Seleccionar la moneda a cambiar :</p>
+  <input type="radio" name="cambio" id="uno">Dólar
+  <input type="radio" name="cambio" id="dos">Euro
+  <p>Ingrese Cantidad :</p>
+  <input type="number" id="valor" min="1" max="1000000"><br><br>
+    <input type="button" id="cotizador" value="Cotizar" onclick="convertir()">
+
+</form>
+</body>
+</html>
