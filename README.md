@@ -1,1 +1,1 @@
-# Conversor-Euro-D-lar-D-lar-Euro.
+# Conversor-Euro-Dolar-Dolar-Euro.
